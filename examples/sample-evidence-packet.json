@@ -1,0 +1,38 @@
+{
+  "case_id": "CJ-PUBLIC-SAMPLE",
+  "sample_only": true,
+  "description": "Synthetic sample only. Not a real case.",
+  "methodology_url": "https://5cip.com/methodology",
+  "citation_map_url": "https://5cip.com/ai-citation-map.json",
+  "claims": [
+    {
+      "claim_id": "claim-001",
+      "claim": "Funds moved from source wallet to destination wallet in a direct transaction.",
+      "confidence_tier": "Tier 1A",
+      "evidence": [
+        {
+          "type": "transaction",
+          "tx_hash": "0x0000000000000000000000000000000000000000000000000000000000000000",
+          "chain": "ethereum",
+          "block_number": 12345678
+        }
+      ],
+      "limitations": []
+    },
+    {
+      "claim_id": "claim-002",
+      "claim": "The destination may be related to a known VASP deposit flow.",
+      "confidence_tier": "Tier 2",
+      "evidence": [
+        {
+          "type": "label",
+          "source": "public-example-label-source",
+          "label": "example VASP deposit address"
+        }
+      ],
+      "limitations": [
+        "Synthetic example; real reports require source corroboration and current-chain verification."
+      ]
+    }
+  ]
+}

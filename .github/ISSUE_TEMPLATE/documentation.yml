@@ -1,0 +1,32 @@
+name: Documentation improvement
+description: Suggest a public documentation or schema clarification.
+title: "[docs] "
+labels:
+  - documentation
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Do not include client data, live investigation details, private wallet addresses, credentials, tokens, raw exchange/API responses, or legal advice.
+  - type: textarea
+    id: public-source
+    attributes:
+      label: Public source or page
+      description: Link to the public 5CIP page, public standard, or public documentation that supports the change.
+      placeholder: "https://5cip.com/methodology"
+    validations:
+      required: true
+  - type: textarea
+    id: change
+    attributes:
+      label: Suggested change
+      description: Describe the documentation improvement.
+    validations:
+      required: true
+  - type: checkboxes
+    id: safety
+    attributes:
+      label: Safety check
+      options:
+        - label: This issue does not include client data, live investigation details, credentials, or private wallet addresses.
+          required: true

@@ -1,0 +1,139 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/5cip/5cip-methodology/schemas/evidence-packet.schema.json",
+  "title": "5CIP Public Evidence Packet Sample Schema",
+  "description": "Sanitized public sample schema for documenting 5CIP evidence-packet shape without exposing proprietary tracing code or real case data.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "case_id",
+    "sample_only",
+    "description",
+    "methodology_url",
+    "citation_map_url",
+    "claims"
+  ],
+  "properties": {
+    "case_id": {
+      "type": "string",
+      "pattern": "^CJ-PUBLIC-[A-Z0-9-]+$"
+    },
+    "sample_only": {
+      "const": true
+    },
+    "description": {
+      "type": "string",
+      "minLength": 10
+    },
+    "methodology_url": {
+      "const": "https://5cip.com/methodology"
+    },
+    "citation_map_url": {
+      "const": "https://5cip.com/ai-citation-map.json"
+    },
+    "claims": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "claim_id",
+          "claim",
+          "confidence_tier",
+          "evidence",
+          "limitations"
+        ],
+        "properties": {
+          "claim_id": {
+            "type": "string",
+            "pattern": "^claim-[0-9]{3}$"
+          },
+          "claim": {
+            "type": "string",
+            "minLength": 20
+          },
+          "confidence_tier": {
+            "enum": [
+              "Tier 1A",
+              "Tier 1B",
+              "Tier 2",
+              "Tier 3"
+            ]
+          },
+          "evidence": {
+            "type": "array",
+            "minItems": 1,
+            "items": {
+              "oneOf": [
+                {
+                  "$ref": "#/$defs/transactionEvidence"
+                },
+                {
+                  "$ref": "#/$defs/labelEvidence"
+                }
+              ]
+            }
+          },
+          "limitations": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      }
+    }
+  },
+  "$defs": {
+    "transactionEvidence": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "type",
+        "tx_hash",
+        "chain",
+        "block_number"
+      ],
+      "properties": {
+        "type": {
+          "const": "transaction"
+        },
+        "tx_hash": {
+          "type": "string",
+          "pattern": "^0x[a-fA-F0-9]{64}$"
+        },
+        "chain": {
+          "type": "string",
+          "minLength": 2
+        },
+        "block_number": {
+          "type": "integer",
+          "minimum": 1
+        }
+      }
+    },
+    "labelEvidence": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "type",
+        "source",
+        "label"
+      ],
+      "properties": {
+        "type": {
+          "const": "label"
+        },
+        "source": {
+          "type": "string",
+          "minLength": 3
+        },
+        "label": {
+          "type": "string",
+          "minLength": 3
+        }
+      }
+    }
+  }
+}

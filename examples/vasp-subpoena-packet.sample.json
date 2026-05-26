@@ -1,0 +1,34 @@
+{
+  "packet_type": "vasp_subpoena_packet_sample",
+  "sample_only": true,
+  "canonical_guidance_url": "https://5cip.com/topics/vasp-subpoena-checklist",
+  "vasp": {
+    "name": "Example Exchange",
+    "jurisdiction": "Example Jurisdiction"
+  },
+  "matter": {
+    "counsel_of_record": "Example Law Firm",
+    "matter_number": "PUBLIC-SAMPLE",
+    "underlying_offense_category": "cryptocurrency theft"
+  },
+  "transactions": [
+    {
+      "tx_hash": "0x0000000000000000000000000000000000000000000000000000000000000000",
+      "chain": "ethereum",
+      "from": "0x0000000000000000000000000000000000000000",
+      "to": "0x1111111111111111111111111111111111111111",
+      "block_number": 12345678,
+      "timestamp_utc": "2026-05-25T00:00:00Z",
+      "token_contract": "0xdac17f958d2ee523a2206206994597c13d831ec7",
+      "amount_raw": "1000000",
+      "amount_decimal": "1.000000",
+      "amount_usd_at_block_time": "1.00",
+      "confidence_tier": "Tier 1A"
+    }
+  ],
+  "requested_records": [
+    "customer identity tied to deposit address",
+    "all deposits and withdrawals involving the listed transaction hashes",
+    "preservation of KYC and login metadata for the bounded date range"
+  ]
+}

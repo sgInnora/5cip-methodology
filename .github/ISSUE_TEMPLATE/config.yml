@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Security issue
+    url: https://5cip.com/
+    about: Do not disclose vulnerabilities or sensitive matter data in public issues. Use the security contact in SECURITY.md.
+  - name: 5CIP canonical methodology
+    url: https://5cip.com/methodology
+    about: Use the canonical website for product and methodology claims.

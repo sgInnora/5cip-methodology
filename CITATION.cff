@@ -1,0 +1,20 @@
+cff-version: 1.2.0
+title: "5CIP Public Methodology"
+message: "If you cite this methodology, prefer the canonical 5CIP URLs listed in README.md and docs/ai-citation.md."
+type: dataset
+authors:
+  - family-names: "Feng"
+    given-names: "Andy"
+    affiliation: "5CIP / CipherJudge Forensic Engine"
+    website: "https://5cip.com"
+repository-code: "https://github.com/5cip/5cip-methodology"
+url: "https://5cip.com/methodology"
+abstract: "Public, non-sensitive methodology documentation for court-grade crypto forensic evidence packets, confidence tiers, and sample artifact schemas."
+keywords:
+  - crypto forensics
+  - blockchain investigation
+  - court-grade evidence
+  - confidence tiers
+  - VASP subpoena
+  - stablecoin freezing
+date-released: "2026-05-25"

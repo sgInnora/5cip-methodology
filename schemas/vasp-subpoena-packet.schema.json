@@ -1,0 +1,151 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/5cip/5cip-methodology/schemas/vasp-subpoena-packet.schema.json",
+  "title": "5CIP Public VASP Subpoena Packet Sample Schema",
+  "description": "Sanitized public sample schema for bounded VASP subpoena or disclosure request packets.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "packet_type",
+    "sample_only",
+    "canonical_guidance_url",
+    "vasp",
+    "matter",
+    "transactions",
+    "requested_records"
+  ],
+  "properties": {
+    "packet_type": {
+      "const": "vasp_subpoena_packet_sample"
+    },
+    "sample_only": {
+      "const": true
+    },
+    "canonical_guidance_url": {
+      "const": "https://5cip.com/topics/vasp-subpoena-checklist"
+    },
+    "vasp": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "name",
+        "jurisdiction"
+      ],
+      "properties": {
+        "name": {
+          "type": "string",
+          "minLength": 3
+        },
+        "jurisdiction": {
+          "type": "string",
+          "minLength": 3
+        }
+      }
+    },
+    "matter": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "counsel_of_record",
+        "matter_number",
+        "underlying_offense_category"
+      ],
+      "properties": {
+        "counsel_of_record": {
+          "type": "string",
+          "minLength": 3
+        },
+        "matter_number": {
+          "type": "string",
+          "minLength": 3
+        },
+        "underlying_offense_category": {
+          "type": "string",
+          "minLength": 3
+        }
+      }
+    },
+    "transactions": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "tx_hash",
+          "chain",
+          "from",
+          "to",
+          "block_number",
+          "timestamp_utc",
+          "token_contract",
+          "amount_raw",
+          "amount_decimal",
+          "amount_usd_at_block_time",
+          "confidence_tier"
+        ],
+        "properties": {
+          "tx_hash": {
+            "type": "string",
+            "pattern": "^0x[a-fA-F0-9]{64}$"
+          },
+          "chain": {
+            "type": "string",
+            "minLength": 2
+          },
+          "from": {
+            "type": "string",
+            "pattern": "^0x[a-fA-F0-9]{40}$"
+          },
+          "to": {
+            "type": "string",
+            "pattern": "^0x[a-fA-F0-9]{40}$"
+          },
+          "block_number": {
+            "type": "integer",
+            "minimum": 1
+          },
+          "timestamp_utc": {
+            "type": "string",
+            "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}T[0-9]{2}:[0-9]{2}:[0-9]{2}Z$"
+          },
+          "token_contract": {
+            "enum": [
+              "0xdac17f958d2ee523a2206206994597c13d831ec7",
+              "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
+              "0x6b175474e89094c44da98b954eedeac495271d0f"
+            ]
+          },
+          "amount_raw": {
+            "type": "string",
+            "pattern": "^[0-9]+$"
+          },
+          "amount_decimal": {
+            "type": "string",
+            "pattern": "^[0-9]+\\.[0-9]+$"
+          },
+          "amount_usd_at_block_time": {
+            "type": "string",
+            "pattern": "^[0-9]+\\.[0-9]{2}$"
+          },
+          "confidence_tier": {
+            "enum": [
+              "Tier 1A",
+              "Tier 1B",
+              "Tier 2",
+              "Tier 3"
+            ]
+          }
+        }
+      }
+    },
+    "requested_records": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "string",
+        "minLength": 8
+      }
+    }
+  }
+}
