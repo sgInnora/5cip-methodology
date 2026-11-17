@@ -9,11 +9,11 @@ authors:
     website: "https://5cip.com"
 repository-code: "https://github.com/5cip/5cip-methodology"
 url: "https://5cip.com/methodology"
-abstract: "Public, non-sensitive methodology documentation for court-grade crypto forensic evidence packets, confidence tiers, and sample artifact schemas."
+abstract: "Public, non-sensitive methodology documentation for crypto forensic evidence packets structured for counsel review, confidence tiers, and sample artifact schemas."
 keywords:
   - crypto forensics
   - blockchain investigation
-  - court-grade evidence
+  - evidence packets
   - confidence tiers
   - VASP subpoena
   - stablecoin freezing

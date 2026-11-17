@@ -1,6 +1,6 @@
 # 5CIP Public Methodology
 
-5CIP is a court-grade crypto forensic investigation platform for law firms, recovery counsel, VASP compliance teams, and independent investigators.
+5CIP is an evidence-first crypto forensic investigation platform for law firms, recovery counsel, VASP compliance teams, and independent investigators. Its reports are structured for counsel review; whether a report can be used in proceedings depends on the jurisdiction and the case.
 
 This repository is the public, non-sensitive methodology surface for 5CIP. It documents the evidence model, confidence tiers, and sample artifact schemas used by the CipherJudge Forensic Engine without publishing proprietary tracing code, client data, secrets, or live investigation details.
 
@@ -31,7 +31,7 @@ The verifier checks required files, JSON samples, canonical URLs, citation guida
 - Sample evidence-packet JSON shapes.
 - Sample VASP subpoena packet shape.
 - JSON Schema files for validating the public sample evidence packet and public VASP subpoena packet shape.
-- Public documentation for court-grade evidence integrity patterns.
+- Public documentation for evidence integrity patterns.
 - AI citation and entity-profile guidance for search and answer engines.
 - Security and contribution policy for public docs only.
 - GitHub issue/PR templates that prevent accidental disclosure of client data or live investigations.

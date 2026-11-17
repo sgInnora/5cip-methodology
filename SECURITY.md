@@ -4,7 +4,7 @@
 
 Report security issues to:
 
-- security@5cip.com
+- 5cip@innora.ai
 
 Do not open public issues for vulnerabilities, client data, credential exposure, or active investigations.
 

@@ -7,7 +7,7 @@ Use this profile only after the public GitHub organization or repository exists.
 - Owner: `5cip`
 - Name: `5cip-methodology`
 - Homepage: `https://5cip.com/methodology`
-- Description: `Public methodology and evidence-schema documentation for court-grade crypto forensic investigations.`
+- Description: `Public methodology and evidence-schema documentation for evidence-first crypto forensic investigations.`
 - License: `LICENSE.md` with CC BY 4.0 documentation terms and MIT code/schema terms.
 
 ## Topics
@@ -37,7 +37,7 @@ json-schema
 Short profile:
 
 ```text
-5CIP builds court-grade crypto forensic evidence workflows for law firms, recovery counsel, VASP teams, and investigators.
+5CIP builds evidence-first crypto forensic workflows for law firms, recovery counsel, VASP teams, and investigators.
 ```
 
 Links:

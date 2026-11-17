@@ -210,6 +210,36 @@ def check_sensitive_patterns(failures: list[str]) -> None:
                 fail(f"unapproved wallet-like address in {relative}: {address}", failures)
 
 
+# Wording this repository must not use about 5CIP. Admissibility is decided by a court, per jurisdiction and
+# per case; the public wording is "structured for counsel review". The only confirmed contact address is
+# 5cip@innora.ai.
+FORBIDDEN_CLAIMS = [
+    re.compile(pattern, re.IGNORECASE)
+    for pattern in [
+        r"court[- ]grade",
+        r"court[- ]ready",
+        r"court[- ]admissible",
+        r"[a-z0-9._-]+@5cip\.com",
+    ]
+]
+
+
+def check_forbidden_claims(failures: list[str]) -> None:
+    for path in ROOT.rglob("*"):
+        if not path.is_file() or ".git" in path.parts:
+            continue
+        relative = path.relative_to(ROOT).as_posix()
+        if relative == "scripts/verify_public_repo.py":
+            continue
+        try:
+            text = path.read_text(encoding="utf-8")
+        except UnicodeDecodeError:
+            continue
+        for pattern in FORBIDDEN_CLAIMS:
+            if pattern.search(text):
+                fail(f"wording this repository must not use in {relative}: {pattern.pattern}", failures)
+
+
 def main() -> int:
     failures: list[str] = []
     check_required_files(failures)
@@ -218,6 +248,7 @@ def main() -> int:
     check_sample_shapes(failures)
     check_markers(failures)
     check_sensitive_patterns(failures)
+    check_forbidden_claims(failures)
 
     if failures:
         print("verify_public_repo: FAIL")

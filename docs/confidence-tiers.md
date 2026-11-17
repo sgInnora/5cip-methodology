@@ -29,17 +29,16 @@ Examples:
 
 ## Tier 2: Indirect Attribution
 
-Use for evidence-supported inference.
+Use for an indirect link that a second, independent public record corroborates.
 
 Examples:
 
-- timing correlation;
 - bridge source/destination matching from one or more indexers;
-- VASP or label-provider corroboration;
+- a label from a labeling provider, confirmed by a second public record (for an exchange deposit address: a publicly verifiable sweep from that address into the exchange hot wallet);
 - address reuse;
 - relayer funding pattern.
 
-Tier 2 claims must identify the corroborating sources and limitations.
+Tier 2 claims must identify the corroborating sources and limitations. A single label with nothing else behind it, or a timing correlation on its own, is not Tier 2: report it as a lead (Tier 3).
 
 ## Tier 3: Needs Corroboration
 
