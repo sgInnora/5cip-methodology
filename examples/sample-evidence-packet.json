@@ -28,10 +28,16 @@
           "type": "label",
           "source": "public-example-label-source",
           "label": "example VASP deposit address"
+        },
+        {
+          "type": "transaction",
+          "tx_hash": "0x1111111111111111111111111111111111111111111111111111111111111111",
+          "chain": "ethereum",
+          "block_number": 12345679
         }
       ],
       "limitations": [
-        "Synthetic example; real reports require source corroboration and current-chain verification."
+        "Synthetic example. The transaction stands for the second public record a Tier 2 claim needs (here: a sweep from the labeled address); real reports require current-chain verification."
       ]
     }
   ]

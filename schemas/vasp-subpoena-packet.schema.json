@@ -1,6 +1,6 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://github.com/5cip/5cip-methodology/schemas/vasp-subpoena-packet.schema.json",
+  "$id": "https://github.com/sgInnora/5cip-methodology/schemas/vasp-subpoena-packet.schema.json",
   "title": "5CIP Public VASP Subpoena Packet Sample Schema",
   "description": "Sanitized public sample schema for bounded VASP subpoena or disclosure request packets.",
   "type": "object",

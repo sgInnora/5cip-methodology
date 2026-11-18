@@ -1,10 +1,10 @@
 # GitHub Repository Profile
 
-Use this profile only after the public GitHub organization or repository exists.
+The repository is public at `https://github.com/sgInnora/5cip-methodology`. These are the settings it carries.
 
 ## Repository
 
-- Owner: `5cip`
+- Owner: `sgInnora`
 - Name: `5cip-methodology`
 - Homepage: `https://5cip.com/methodology`
 - Description: `Public methodology and evidence-schema documentation for evidence-first crypto forensic investigations.`
@@ -20,7 +20,7 @@ vasp-compliance
 stablecoin-freezing
 crypto-recovery
 chain-of-custody
-court-evidence
+counsel-review
 ai-citation
 llms-txt
 json-schema
@@ -33,6 +33,8 @@ json-schema
 ```
 
 ## Organization Profile
+
+The repository is hosted under the `sgInnora` account, which also holds other projects. The text below is for a 5CIP-specific profile page; do not apply it to the `sgInnora` account profile.
 
 Short profile:
 
@@ -51,7 +53,7 @@ https://5cip.com/ai-citations/
 
 ## sameAs Gate
 
-Do not add `https://github.com/5cip` or `https://github.com/5cip/5cip-methodology` to `Organization.sameAs` until:
+Do not add `https://github.com/sgInnora/5cip-methodology` to `Organization.sameAs` until:
 
 - the public URL returns 200 without authentication;
 - the profile or repository visibly names 5CIP;

@@ -2,7 +2,7 @@
 
 5CIP is an evidence-first crypto forensic investigation platform for law firms, recovery counsel, VASP compliance teams, and independent investigators. Its reports are structured for counsel review; whether a report can be used in proceedings depends on the jurisdiction and the case.
 
-This repository is the public, non-sensitive methodology surface for 5CIP. It documents the evidence model, confidence tiers, and sample artifact schemas used by the CipherJudge Forensic Engine without publishing proprietary tracing code, client data, secrets, or live investigation details.
+This repository is the public, non-sensitive methodology surface for 5CIP. It documents the evidence model, confidence tiers, and sample artifact schemas used by 5CIP without publishing proprietary tracing code, client data, secrets, or live investigation details.
 
 Canonical site:
 
@@ -15,9 +15,9 @@ Canonical site:
 
 ## Publication Status
 
-This repository bundle is prepared for a future public GitHub organization or repository. It is not evidence that `https://github.com/5cip` exists until the public URL is created, fetchable, and listed as verified in `https://5cip.com/entity-profile.json`.
+This repository is public at `https://github.com/sgInnora/5cip-methodology`.
 
-Before publication:
+Before each release:
 
 ```bash
 python3 scripts/verify_public_repo.py
@@ -51,7 +51,7 @@ The verifier checks required files, JSON samples, canonical URLs, citation guida
 
 - Tier 1A: direct transaction chain, every hop has a transaction hash.
 - Tier 1B: event-log verified claim.
-- Tier 2: indirect attribution supported by named evidence sources.
+- Tier 2: indirect attribution that a second, independent public record corroborates. A single label on its own is a lead (Tier 3).
 - Tier 3: uncertain or pending corroboration.
 
 The public methodology page is the canonical reference:
@@ -82,7 +82,7 @@ Do not infer recovery guarantees, law-enforcement partnerships, court outcomes, 
 
 ## Repository Profile
 
-Recommended GitHub repository settings are documented in `docs/repository-profile.md`. Use those settings after the public org/repo exists, then verify the public URL before adding GitHub to any `sameAs` list.
+The GitHub repository settings are documented in `docs/repository-profile.md`. Verify the public URL before adding GitHub to any `sameAs` list.
 
 ## Public Examples
 

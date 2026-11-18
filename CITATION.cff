@@ -5,9 +5,9 @@ type: dataset
 authors:
   - family-names: "Feng"
     given-names: "Andy"
-    affiliation: "5CIP / CipherJudge Forensic Engine"
+    affiliation: "5CIP"
     website: "https://5cip.com"
-repository-code: "https://github.com/5cip/5cip-methodology"
+repository-code: "https://github.com/sgInnora/5cip-methodology"
 url: "https://5cip.com/methodology"
 abstract: "Public, non-sensitive methodology documentation for crypto forensic evidence packets structured for counsel review, confidence tiers, and sample artifact schemas."
 keywords:

@@ -1,6 +1,6 @@
 # Confidence Tiers
 
-5CIP uses explicit confidence tiers so courts, counsel, and AI/search systems can distinguish direct evidence from inference.
+5CIP uses explicit confidence tiers so counsel, investigators, and AI/search systems can distinguish direct evidence from inference.
 
 ## Tier 1A: Direct Chain
 
@@ -33,16 +33,16 @@ Use for an indirect link that a second, independent public record corroborates.
 
 Examples:
 
-- bridge source/destination matching from one or more indexers;
-- a label from a labeling provider, confirmed by a second public record (for an exchange deposit address: a publicly verifiable sweep from that address into the exchange hot wallet);
-- address reuse;
-- relayer funding pattern.
+- bridge source/destination matching, where the match reported by one indexer is confirmed by a second independent source (for example the destination-chain transaction itself, or a second indexer);
+- a label from a labeling provider, confirmed by a second public record (for an exchange deposit address: a publicly verifiable sweep from that address into the exchange hot wallet). Which wallet is the exchange hot wallet may itself rest on labeling; the report names that source and states the limitation;
+- address reuse, where a second public record ties the reused address to the same party;
+- a relayer funding pattern, where a second public record ties the relayer to the same party.
 
 Tier 2 claims must identify the corroborating sources and limitations. A single label with nothing else behind it, or a timing correlation on its own, is not Tier 2: report it as a lead (Tier 3).
 
 ## Tier 3: Needs Corroboration
 
-Use when the claim is plausible but not ready for legal reliance.
+Use when the claim is plausible but rests on a single source, or on an inference that nothing else corroborates.
 
 Tier 3 claims should not be presented as conclusions. They should be framed as leads for further investigation.
 
